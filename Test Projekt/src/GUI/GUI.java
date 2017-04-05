@@ -355,7 +355,7 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
          if(object.getSource()==ButtonQuickSave){
              System.out.println("autosave");
              //automatisches sichern mit timer????
-             //ist das nicht der Wahnsinn
+             //glaub schon
              QuickSave();            
          }
          if(object.getSource()==ButtonTrash)

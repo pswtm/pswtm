@@ -72,6 +72,8 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
      Icon IconKondensatorBlack;
      Icon IconKondensatorWhite;
      Icon IconKondensatorBlackSchrift;
+     Icon IconKondensatorBlackRand;
+     Icon IconKondensatorBlackSchriftRand;
      JButton ButtonQuickSave;
      JButton ButtonTrash;
      JButton ButtonKondensator;
@@ -127,7 +129,11 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
         IconKondensatorBlack=new ImageIcon("Kondensatorschwarz.png");
         IconKondensatorWhite=new ImageIcon("Kondensatorweiss.png");
         IconKondensatorBlackSchrift=new ImageIcon("Kondensatorschwarzschrift.png");
+        IconKondensatorBlackRand=new ImageIcon("KondensatorschwarzRand.png");
+        IconKondensatorBlackSchriftRand=new ImageIcon("Kondensatorschwarzschriftrand.png");
         ButtonKondensator=new JButton(IconKondensatorBlack);
+        //ButtonKondensator=new JButton(IconKondensatorBlackRand);
+
         ButtonKondensator.addActionListener(this);
         ButtonKondensator.setBackground(white);
         ButtonKondensator.setBorder(null);

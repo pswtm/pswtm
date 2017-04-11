@@ -143,7 +143,7 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
         		System.out.println("maus drauf");
         		 if(jframe.getContentPane().getBackground()==white){
         		 //ButtonKondensator.setIcon(IconKondensatorBlackSchrift);
-        			 ButtonKondensator.setIcon(IconKondensatorWhite);
+        			 ButtonKondensator.setIcon(IconKondensatorBlackSchrift);
         		 }
         		 else if(jframe.getContentPane().getBackground()==black)
                  {

@@ -74,6 +74,8 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
      Icon IconKondensatorBlack;
      Icon IconKondensatorWhite;
      Icon IconKondensatorBlackSchrift;
+     Icon IconKondensatorBlackRand;
+     Icon IconKondensatorBlackSchriftRand;
      JButton ButtonQuickSave;
      JButton ButtonTrash;
      JButton ButtonKondensator;
@@ -130,7 +132,11 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
         IconKondensatorBlack=new ImageIcon("Kondensatorschwarz.png");
         IconKondensatorWhite=new ImageIcon("Kondensatorweiss.png");
         IconKondensatorBlackSchrift=new ImageIcon("Kondensatorschwarzschrift.png");
+        IconKondensatorBlackRand=new ImageIcon("KondensatorschwarzRand.png");
+        IconKondensatorBlackSchriftRand=new ImageIcon("Kondensatorschwarzschriftrand.png");
         ButtonKondensator=new JButton(IconKondensatorBlack);
+        //ButtonKondensator=new JButton(IconKondensatorBlackRand);
+
         ButtonKondensator.addActionListener(this);
         ButtonKondensator.setBackground(white);
         ButtonKondensator.setBorder(null);
@@ -139,8 +145,13 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
         	public void mouseEntered(java.awt.event.MouseEvent evt){
         		System.out.println("maus drauf");
         		 if(jframe.getContentPane().getBackground()==white){
+
         		 ButtonKondensator.setIcon(IconKondensatorBlackSchrift);
         			 //ButtonKondensator.setIcon(IconKondensatorWhite);
+
+        		 //ButtonKondensator.setIcon(IconKondensatorBlackSchrift);
+        			 ButtonKondensator.setIcon(IconKondensatorBlackSchrift);
+
         		 }
         		 else if(jframe.getContentPane().getBackground()==black)
                  {

@@ -9,6 +9,7 @@ package GUI;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -52,7 +53,8 @@ import javafx.geometry.Orientation;
 
 public class GUI extends JFrame implements ActionListener//, MouseListener
 {
-	 JFrame jframe;
+	 private static final Graphics Grapics = null;
+	JFrame jframe;
      JMenuBar menubar;
      JToolBar toolbar;
      JMenu menu;
@@ -80,6 +82,7 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
  	 int val;
  	 Color black= Color.black;
  	 Color white= Color.white;
+ 	Graphics g;
      
 	public GUI()
 	{
@@ -136,8 +139,8 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
         	public void mouseEntered(java.awt.event.MouseEvent evt){
         		System.out.println("maus drauf");
         		 if(jframe.getContentPane().getBackground()==white){
-        		 //ButtonKondensator.setIcon(IconKondensatorBlackSchrift);
-        			 ButtonKondensator.setIcon(IconKondensatorWhite);
+        		 ButtonKondensator.setIcon(IconKondensatorBlackSchrift);
+        			 //ButtonKondensator.setIcon(IconKondensatorWhite);
         		 }
         		 else if(jframe.getContentPane().getBackground()==black)
                  {
@@ -208,6 +211,7 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setVisible(true);
 		
+        //paintComponent(g);
 	}
     public void mouseEntered(MouseEvent e){
     	if (e.getSource() == ButtonKondensator){
@@ -368,4 +372,10 @@ public class GUI extends JFrame implements ActionListener//, MouseListener
          }
     }
 
+	 protected void paintComponent(Graphics g)
+	 {
+		 //super.paintComponent(g);
+		 System.out.println("Rechteck");
+		 g.fillRect(50, 50, 50, 50);
+	 }
 }

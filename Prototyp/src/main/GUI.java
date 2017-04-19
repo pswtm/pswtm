@@ -2,7 +2,9 @@ package main;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.GridLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -20,11 +22,23 @@ public GUI()
 	 jframe.setLocationRelativeTo(null);
 	 jframe.setBackground(Color.BLACK);
 	 jframe.setForeground(Color.BLACK);
+	 /*
+	 jframe.setLayout(new GridLayout(5, 4));
+	    jframe.add(new JButton("Button 1"));
+	    jframe.add(new JButton("Button 2"));
+	    jframe.add(new JButton("Button 3"));
+	    jframe.add(new JButton("Button 4"));
+	    jframe.add(new JButton("Button 5"));
+	    jframe.add(new JButton("Button 6"));
+	    jframe.add(new JButton("Button 7"));
+	    jframe.add(new JButton("Button 8"));
+	    */
 	 jframe.setVisible(true);
-
+	 
+	 repaint();
 }
 @Override
-public void paint(Graphics g)
+public void paintComponent(Graphics g)
 {
 	super.paintComponent(g);
 	
